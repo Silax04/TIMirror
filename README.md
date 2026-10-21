@@ -27,11 +27,13 @@ The USB and WebAssembly runtime files are part of the app; keep them alongside t
 
 - A TI‑Nspire calculator and a USB connection
 - A desktop browser that supports WebUSB (use a current Chromium-based browser)
-- Python 3.7 or newer
+- Python 3.7 or newer to run the included server. The browser's USB API requires a secure context; `localhost` is treated as secure.
 
-The browser's USB API requires a secure context; `localhost` is treated as secure. Turn on the calculator **before** connecting it. When prompted by the browser, select the calculator and allow access.
+Turn on the calculator **before** connecting it. When prompted by the browser, select the calculator and allow access.
 
 ## Run locally
+
+### Python 3.7 or newer
 
 From the repository root, run:
 
@@ -39,7 +41,9 @@ From the repository root, run:
 python server.py
 ```
 
-Then open [http://localhost:8000](http://localhost:8000). The server always serves the project directory, regardless of the directory from which it was started. It adds the cross-origin isolation headers required by the WebAssembly worker. When hosting the page elsewhere, configure equivalent headers on that server.
+Then open [http://localhost:8000](http://localhost:8000). The server always serves the project directory, regardless of the directory from which it was started.
+
+The Python server adds the cross-origin isolation headers required by the WebAssembly worker. When hosting the page elsewhere, configure equivalent headers on that server.
 
 Connect & Start Mirroring launches the USB connection flow. After the first screen frame appears, use the preview controls to resize, copy, pop out, or expand the display. Clipboard image access depends on browser support and permissions.
 
@@ -59,7 +63,7 @@ TIMirror affiche dans le navigateur l’écran d’une calculatrice Texas Instru
 
 ### Démarrage rapide
 
-Un navigateur de bureau compatible avec WebUSB est nécessaire (utiliser une version récente d’un navigateur basé sur Chromium), ainsi que Python 3.7 ou plus récent. Allume la calculatrice **avant** de la brancher, puis autorise son accès dans la fenêtre de sélection du navigateur.
+Un navigateur de bureau compatible avec WebUSB est nécessaire (utiliser une version récente d’un navigateur basé sur Chromium), ainsi qu’un serveur HTTP local. Allume la calculatrice **avant** de la brancher, puis autorise son accès dans la fenêtre de sélection du navigateur.
 
 À la racine du projet, lance `python server.py` et ouvre [http://localhost:8000](http://localhost:8000). Le serveur fournit les en-têtes requis par le module WebAssembly.
 

@@ -1,7 +1,11 @@
 {
-  "name": "basic-node",
+  "name": "timirror-local-server",
   "version": "1.0.0",
+  "description": "Local Express server for the TIMirror browser app",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"

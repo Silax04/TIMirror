@@ -19,6 +19,7 @@ let pipStatus = null;
 const sizeSlider = id("preview-size");
 if (sizeSlider) sizeSlider.oninput = (event) => {
     canvas.style.setProperty("--preview-width", `${event.target.value}px`);
+    id("preview-container").style.setProperty("--preview-width", `${event.target.value}px`);
     id("preview-size-value").innerText = event.target.value;
 };
 
@@ -56,10 +57,10 @@ if (pipButton) pipButton.onclick = async () => {
     try {
         pipWindow = await documentPictureInPicture.requestWindow({ width: 480, height: 400 });
         pipWindow.document.title = "TIMirror";
-        pipWindow.document.body.style.cssText = "margin:0;padding:12px;background:#5f9ea0;font:14px Arial,sans-serif;text-align:center";
+        pipWindow.document.body.style.cssText = "margin:0;padding:16px;background:#f4f6fb;font:14px Arial,sans-serif;text-align:center;color:#182230";
         pipWindow.document.body.innerHTML = `<canvas width="320" height="240" aria-label="Live TI-Nspire screen"></canvas><div style="margin-top:10px"><button type="button" style="padding:8px 14px;cursor:pointer">Copy Screenshot</button><div role="status" aria-live="polite" style="margin-top:8px"></div></div>`;
         pipCanvas = pipWindow.document.querySelector("canvas");
-        pipCanvas.style.cssText = "display:block;width:100%;height:auto;image-rendering:pixelated;background:#000";
+        pipCanvas.style.cssText = "display:block;width:100%;height:auto;image-rendering:pixelated;background:#000;border:1px solid #e2e6ed;border-radius:10px";
         pipStatus = pipWindow.document.querySelector("[role=status]");
         const setPipStatus = (message, isError = false) => {
             if (!pipStatus) return;

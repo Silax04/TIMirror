@@ -1,5 +1,7 @@
 # TIMirror — enhanced fork
 
+**Try it online: [Open TIMirror](https://timirror.silax04.workers.dev).**
+
 Mirror the screen of a Texas Instruments TI‑Nspire calculator in your browser. This fork extends [hieyou1/TIMirror](https://github.com/hieyou1/TIMirror) with a resizable live preview, screenshot copying, Picture-in-Picture, and full-screen viewing.
 
 ## Features
@@ -33,10 +35,6 @@ Turn on the calculator **before** connecting it. When prompted by the browser, s
 
 ## Run locally
 
-### Use the hosted version
-
-To use TIMirror without hosting it yourself, open [timirror.silax04.workers.dev](https://timirror.silax04.workers.dev).
-
 ### Python 3.7 or newer
 
 From the repository root, run:
@@ -63,11 +61,11 @@ This project is distributed under the MIT License. See [LICENSE](LICENSE) for de
 
 ## Français
 
+**Utiliser le site : [ouvrir TIMirror](https://timirror.silax04.workers.dev).**
+
 TIMirror affiche dans le navigateur l’écran d’une calculatrice Texas Instruments TI‑Nspire. Cette version dérivée de [hieyou1/TIMirror](https://github.com/hieyou1/TIMirror) ajoute un aperçu redimensionnable, la copie d’une capture d’écran, le mode Picture-in-Picture et l’affichage plein écran.
 
 ### Démarrage rapide
-
-Pour utiliser TIMirror sans l’héberger soi-même, ouvre [timirror.silax04.workers.dev](https://timirror.silax04.workers.dev).
 
 Un navigateur de bureau compatible avec WebUSB est nécessaire (utiliser une version récente d’un navigateur basé sur Chromium), ainsi qu’un serveur HTTP local. Allume la calculatrice **avant** de la brancher, puis autorise son accès dans la fenêtre de sélection du navigateur.
 
